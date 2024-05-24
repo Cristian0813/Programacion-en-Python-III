@@ -16,13 +16,13 @@ Durante este curso, aprenderá todo lo que necesita saber para comenzar con el d
 
     Python tiene varias formas de hacer bucles de código o bucles. Examinará las construcciones de bucle para iterar su código sobre varias secuencias.
 
-2. **[Módulo 2 - Programación básica con Python](./Modulo-2)**
+2. **Módulo 2 - Programación básica con Python**
 
     En el módulo 2, recibirá una introducción a las funciones de Python, incluyendo cómo declarar una función, y cómo pasar datos a una función o devolver datos de una función. También explorará las estructuras de datos, el alcance y los conceptos de las listas y cómo se pueden utilizar en Python. Además, descubrirá las tuplas, los conjuntos, los diccionarios y los kwargs y comprenderá sus principales usos.
 
     Los errores y las excepciones son dos aspectos muy importantes del aprendizaje de Python como nuevo desarrollador. En el módulo 2, comenzará con los errores y las excepciones, y explorará lo que ocurre cuando su código no funciona. También verá el manejo de excepciones y el manejo de archivos en Python, así como la creación de archivos en Python y varios métodos para insertar contenido en un archivo nuevo.
 
-3. **[Módulo 3 - Paradigmas de programación](./Modulo-2)**
+3. **Módulo 3 - Paradigmas de programación**
 
     En el tercer módulo, aprenderá sobre los paradigmas de programación y analizará las características y los conceptos detrás de la programación de procedimientos, la programación funcional y la programación orientada a objetos.
 
@@ -32,7 +32,7 @@ Durante este curso, aprenderá todo lo que necesita saber para comenzar con el d
 
     Finalmente, explorará la programación orientada a objetos y sus cuatro conceptos principales. Conocerá la relación entre clases e instancias en Python creando clases a las que le proporcionará instancias y accediendo a sus variables y métodos. Aprenderá sobre clases y métodos abstractos y cómo implementarlos. También se explican las reglas de resolución de métodos y de herencia con clases hijas y padres. Poder leer archivos es esencial cuando se trabaja con datos almacenados en Python, y descubrirá varias funciones integradas que lo harán más sencillo. 
 
-4. **[Módulo 4: módulos, paquetes, bibliotecas y herramientas](./Modulo-2)**
+4. **Módulo 4: módulos, paquetes, bibliotecas y herramientas**
 
     En el módulo 4, aprendió que Python es un poderoso lenguaje que le permite construir cosas increíbles, y que puede obtener aún más funcionalidad con el uso de módulos, bibliotecas y herramientas. Aprenderá sobre módulos y verá que son los componentes básicos para agregar funcionalidad a su código, y de ese modo sabrá que no necesita rehacer todo continuamente.
 
@@ -40,6 +40,14 @@ Durante este curso, aprenderá todo lo que necesita saber para comenzar con el d
 
     Por último, descubrirá por qué las pruebas son un componente esencial del control de calidad y explorará el tipo de pruebas que debe utilizar. Aprenderá sobre los paquetes de automatización de pruebas y la importancia de las pruebas automatizadas y realizará algunas pruebas con PyTest. Por último, explorará la evolución del TDD (Test-driven development, Desarrollo dirigido por pruebas), y se centrará en cómo aplicar una metodología de desarrollo dirigido por pruebas.
 
-5. **[Módulo 5: evaluaciones calificadas](./Modulo-2)**
+5. **Módulo 5: evaluaciones calificadas**
 
     Aquí aprenderá sobre las evaluaciones calificadas. Luego de completar los elementos individuales de este módulo, probará sus conocimientos y habilidades mediante una evaluación calificada de final del curso.
+
+**Recursos del curso:**
+
+* **Vídeos explicativos:** El curso se compone de una serie de vídeos explicativos que presentan los conceptos de forma clara y concisa.
+* **Ejemplos de código:** Se proporcionan ejemplos de código para ilustrar los conceptos aprendidos y facilitar la práctica.
+* **Ejercicios prácticos:** Se incluyen ejercicios prácticos para que puedas poner a prueba tus conocimientos y habilidades.
+* **Foros de discusión:** Se dispone de foros de discusión donde podrás interactuar con otros estudiantes y con el profesor del curso.
+
