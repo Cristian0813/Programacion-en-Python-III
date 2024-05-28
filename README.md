@@ -16,7 +16,7 @@ Durante este curso, aprenderá todo lo que necesita saber para comenzar con el d
 
     Python tiene varias formas de hacer bucles de código o bucles. Examinará las construcciones de bucle para iterar su código sobre varias secuencias.
 
-2. **Módulo 2 - Programación básica con Python**
+2. **[Módulo 2 - Programación básica con Python](./Modulo-2/)**
 
     En el módulo 2, recibirá una introducción a las funciones de Python, incluyendo cómo declarar una función, y cómo pasar datos a una función o devolver datos de una función. También explorará las estructuras de datos, el alcance y los conceptos de las listas y cómo se pueden utilizar en Python. Además, descubrirá las tuplas, los conjuntos, los diccionarios y los kwargs y comprenderá sus principales usos.
 
