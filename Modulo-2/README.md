@@ -7,31 +7,31 @@ Es esencial comprender los niveles de ámbito en Python y cómo se puede acceder
 ### Niveles de Ámbito en Python
 
 1. **Ámbito Local:** Se refiere a una variable declarada dentro de una función. Por ejemplo,
-    ```py
+```python
     def get_total(a, b):
         total = a + b
         return total
 
     print(get_total(5, 2))
-    ```
+```
 
 2. **Ámbito Cerrado:** Es cuando se declara una variable fuera de una función. Esto significa que se puede acceder desde cualquier lugar. Por ejemplo,
-    ```py
+```python
     def get_total(a, b):
         total = a + b
         def double_it():
             double = total * 2
             print(double)
         double_it()
-    ```
+```
 
 3. **Ámbito Global:** S Por ejemplo,
-    ```py
+```python
     special = 5
     def get_total(a, b):
         total = a + b
         print(special)
-    ```
+```
 
 4. **Ámbito Integrado:** Se refiere a las palabras clave reservadas que Python usa para sus funciones integradas, como `print`, `def`, `for`, `in` y así sucesivamente.  Se puede acceder a las funciones con ámbito integrado en cualquier nivel.
 
@@ -66,7 +66,7 @@ La elección de la estructura de datos adecuada depende de:
 * Las operaciones que se van a realizar con los datos.
 * El rendimiento que se desea obtener.
 
-    ```py
+```python
     # Ejemplo de lista de números
     numeros = [1, 2, 3, 4, 5]
     print(numeros[2])  # Imprime el elemento en la posición 2 (que es 3)
@@ -98,7 +98,7 @@ La elección de la estructura de datos adecuada depende de:
     # Ejemplo de conjunto de cadenas
     nombres_set = {"Juan", "María", "Pedro", "Pedro"}  # Se ignora el valor repetido "Pedro"
     print(nombres_set)  # Imprime el conjunto sin elementos duplicados (ordenado de forma aleatoria)
-    ```
+```
 
 ### Mutabilidad e Inmutabilidad
 
@@ -118,37 +118,115 @@ Elegir la estructura de datos adecuada es crucial para el rendimiento y la efici
 Para encontrar un empleado por su ID, podemos usar una lista o un diccionario.
 
 **Uso de Lista:**
-```py
-employee_list = [
-    {"id": 12345, "name": "John", "department": "Kitchen"},
-    {"id": 12458, "name": "Paul", "department": "House Floor"}
-]
+```python
+    employee_list = [
+        {"id": 12345, "name": "John", "department": "Kitchen"},
+        {"id": 12458, "name": "Paul", "department": "House Floor"}
+    ]
 
-def get_employee(id):
-    for employee in employee_list:
-        if employee['id'] == id:
-            return employee
+    def get_employee(id):
+        for employee in employee_list:
+            if employee['id'] == id:
+                return employee
 
-print(get_employee(12458))
-# OUTPUT: {'id': 12458, 'name': 'Paul', 'department': 'House Floor'}
+    print(get_employee(12458))
+    # OUTPUT: {'id': 12458, 'name': 'Paul', 'department': 'House Floor'}
 ```
 
 Este enfoque funciona bien con pocas entradas, pero se vuelve ineficiente a medida que la lista crece.
 
 **Uso de Diccionario:**
-```py
-employee_dict = {
-    12345: {"id": "12345", "name": "John", "department": "Kitchen"},
-    12458: {"id": "12458", "name": "Paul", "department": "House Floor"}
-}
+```python
+    employee_dict = {
+        12345: {"id": "12345", "name": "John", "department": "Kitchen"},
+        12458: {"id": "12458", "name": "Paul", "department": "House Floor"}
+    }
 
-def get_employee_from_dict(id):
-    return employee_dict[id]
+    def get_employee_from_dict(id):
+        return employee_dict[id]
 
-print(get_employee_from_dict(12458))
-# OUTPUT: {'id': 12458, 'name': 'Paul', 'department': 'House Floor'}
+    print(get_employee_from_dict(12458))
+    # OUTPUT: {'id': 12458, 'name': 'Paul', 'department': 'House Floor'}
 ```
 El diccionario permite búsquedas rápidas sin importar el tamaño, ya que no necesita iterar por cada entrada.
+
+---
+
+## Manejo de archivos: Almacenar contenido y organización
+
+El manejo de archivos es una parte fundamental de la programación, ya que permite a los programas interactuar con el sistema operativo y almacenar datos de forma persistente. Este resumen se centra en los conceptos básicos de la creación, lectura, escritura y organización de archivos en Python.
+
+**Crear un archivo:**
+
+* La función `open()` junto con el modo "w" (escritura) se utiliza para crear un nuevo archivo.
+* Ejemplo: `f = open("mi_archivo.txt", "w")`
+
+**Escribir en un archivo:**
+
+* El método `write()` se utiliza para escribir texto en un archivo abierto.
+* Ejemplo: `f.write("Esta es una línea de texto.")`
+* Es importante cerrar el archivo con `f.close()` cuando se haya terminado de escribir.
+
+**Leer un archivo:**
+
+* La función `open()` junto con el modo "r" (lectura) se utiliza para leer el contenido de un archivo.
+* Ejemplo: `contenido = f.read()`
+* Cerrar el archivo con `f.close()` es importante.
+
+**Leer un archivo línea a línea:**
+
+* El método `readline()` se utiliza para leer un archivo línea a línea.
+* Ejemplo:
+
+```python
+    f = open("mi_archivo.txt", "r")
+    linea = f.readline()
+    while linea:
+        print(linea)
+        linea = f.readline()
+    f.close()
+```
+
+**Escribir en un archivo existente:**
+
+* La función `open()` con el modo "a" (agregar) se utiliza para agregar texto al final de un archivo existente.
+* Ejemplo: `f.write("Más texto para el archivo.")`
+
+**Organizar archivos:**
+
+* Utilizar carpetas para crear una estructura jerárquica de archivos.
+* Nombrar los archivos de forma descriptiva y consistente.
+* Documentar la ubicación y el propósito de los archivos.
+* Eliminar archivos innecesarios para evitar desorden.
+
+**Ejemplo completo:**
+
+```python
+    def crear_archivo(nombre_archivo, contenido):
+        """Crea un archivo y escribe contenido en él."""
+        with open(nombre_archivo, "w") as f:
+            f.write(contenido)
+
+    def leer_archivo(nombre_archivo):
+        """Lee el contenido de un archivo y lo devuelve como una cadena."""
+        with open(nombre_archivo, "r") as f:
+            contenido = f.read()
+        return contenido
+
+    def agregar_contenido_archivo(nombre_archivo, contenido):
+        """Agrega contenido al final de un archivo existente."""
+        with open(nombre_archivo, "a") as f:
+            f.write(contenido)
+
+    # Ejemplo de uso
+    crear_archivo("archivos/mi_archivo.txt", "Este es un archivo nuevo.\n")
+    contenido_archivo = leer_archivo("archivos/mi_archivo.txt")
+    print(f"Contenido del archivo: {contenido_archivo}")
+
+    agregar_contenido_archivo("archivos/mi_archivo.txt", "\nMás texto para el archivo.")
+    nuevo_contenido_archivo = leer_archivo("archivos/mi_archivo.txt")
+    print(f"Contenido del archivo después de agregar: {nuevo_contenido_archivo}")
+```
 
 ---
 
